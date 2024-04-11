@@ -1,0 +1,17 @@
+name = "csp"
+main = "src/index.js"
+compatibility_date = "2024-04-04"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "CSP"
+id = "{update_me}"
+
+[triggers]
+crons = ["0 0 * * 2"]
+
+[vars]
+MAILGUN_API_KEY = ""
+FROM_EMAIL_ADDRESS = ""
+TO_EMAIL_ADDRESS = ""
+MAILGUN_DOMAIN = ""
