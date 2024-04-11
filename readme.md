@@ -15,13 +15,13 @@ Before getting started, make sure you have the following:
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/patelutkarsh/cf-worker.git
+    git clone https://github.com/PatelUtkarsh/cf-worker-content-security-policy-handler.git
     ```
 
 2. Install the project dependencies:
 
     ```bash
-    cd csp-violation-handler
+    cd cf-worker-content-security-policy-handler
     npm install
     ```
 
