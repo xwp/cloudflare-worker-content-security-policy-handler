@@ -25,22 +25,31 @@ Before getting started, make sure you have the following:
     npm install
     ```
 
-3. Update the `wrangler.toml` file with your configuration details.
+3. Create table:
 
-    Update the binding name by creating a KV and ID. You can use the following command to create a KV namespace:
-
-    ```bash
-    npx wrangler kv:namespace create "MY_KV"
     ```
+    npx wrangler d1 create kv
+    ```
+
+    Put the output in wranger.toml file as mentioned in step below replacing binding with `d1`.
+
+    Create table in the database with the above SQL.
+
+    ```
+    npx wrangler d1 execute kv --local --file=./schema.sql
+    ```
+
+4. Update the `wrangler.toml` file with your configuration details.
 
     Update cron schedule as needed.
 
     Update mailgun API key, from email address, to email address, and mailgun domain.
 
     ```toml
-    [[kv_namespaces]]
-    binding = "CSP"
-    id = "{update_me}"
+    [[d1_databases]]
+    binding = "d1"
+    database_name = "{updateme}"
+    database_id = "{update_me}"
 
     [triggers]
     crons = ["0 0 * * 2"]
